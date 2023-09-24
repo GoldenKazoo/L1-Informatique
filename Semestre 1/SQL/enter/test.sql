@@ -1,0 +1,11 @@
+CREATE TABLE TABLETEST(
+    tabletest_id INT NOT NULL PRIMARY KEY,
+    tableset_name VARCHAR(30) NOT NULL,
+    numero INT NOT NULL 
+)
+
+INSERT INTO TABLETEST VALUES(
+1 ,
+"Tropico",
+255
+)

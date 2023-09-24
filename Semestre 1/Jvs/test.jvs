@@ -1,0 +1,17 @@
+void main () {
+    clear();
+    if(99<10){
+        print("NN");
+    }
+    print("LL");
+    if(99<10){
+        print("XX");
+
+    }
+    print("II");
+    if (10<99){
+        print("UU");
+    
+    }
+    print("DD");
+}
