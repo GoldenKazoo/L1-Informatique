@@ -1,0 +1,9 @@
+void main(){
+    int a = readInt("Entrer 1 nombre");
+    int b = readInt("Entrer 1 nombre");
+
+    while(a !=b){
+        b = a ;
+        a = readInt("Entrez encore un nombre");
+    }
+}

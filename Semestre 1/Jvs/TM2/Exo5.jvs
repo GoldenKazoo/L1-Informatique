@@ -1,0 +1,25 @@
+void main(){
+
+    int  k = readInt("Entrez k");
+  int  b1 = 1;
+    int b2 = 1;
+   int b3 = 1;
+
+    println(1);
+    println(1);
+    println(1);
+
+    for(int i = 3 ; i<= k ; i++){
+       if (i % 3 == 0){
+        b1 = b1 + b2 + b3 + i;
+        println(b1);
+       }else if(i % 3 == 1){
+b2 = b1 + b2 + b3 + 1;
+println(b2);
+       }else if(i % 3 == 2){
+        b3 = b1 + b2 + b3 + 1;
+        println(b3);
+       }
+       }
+
+    }

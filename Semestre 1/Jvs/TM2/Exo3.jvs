@@ -1,0 +1,24 @@
+void main (){ 
+
+int x = readInt("Entrez la table que vous voulez");
+
+for(int i = 0 ; i <= 10 ; i++){
+
+    if (i < 10){
+    print(i);
+    print ("  x ");
+    print(x);
+    print(" = ");
+    print(i*x);
+    println("");
+}else{
+     print(i);
+    print (" x ");
+    print(x);
+    print(" = ");
+    print(i*x);
+    println("");
+}
+
+
+}}

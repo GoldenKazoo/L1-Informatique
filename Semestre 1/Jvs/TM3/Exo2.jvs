@@ -1,0 +1,10 @@
+void main() {
+    int a =  0;
+    int b;
+    while(random(1,7) != 6) {
+        a = a + 1;
+     }
+    
+print(a);
+        
+    }

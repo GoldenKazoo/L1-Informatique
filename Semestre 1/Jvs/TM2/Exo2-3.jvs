@@ -1,0 +1,6 @@
+void main () {
+
+for(int i = 2 ; i <= 8888 ; i= i + 2 ){
+    println(i);
+}
+}

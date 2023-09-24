@@ -1,0 +1,40 @@
+/*void main(){
+    int a ;
+    int somme = 0; 
+
+    for (int i = 0 ; i < 10 ; i++){
+
+        a = readInt("Entrez un chiffre ou un nombre");
+        somme = somme + a;
+    }
+print(somme);
+}  
+
+void main(){
+    int a ;
+    int somme = 0; 
+
+    for (int i = 0 ; i < 10 ; i++){
+
+        a = readInt("Entrez un chiffre ou un nombre");
+        somme = somme + a;
+    }
+println(somme);
+println(somme/10);
+}  */
+
+void main() {
+    
+    int a ;
+    int somme = 0; 
+    int nb =  readInt("Combien de chiffre ou de nombres ?");
+
+    for (int i = 0 ; i < nb ; i++){
+
+        a = readInt("Entrez un chiffre ou un nombre");
+        somme = somme + a;
+    }
+println(somme);
+println(somme/nb);
+
+}
