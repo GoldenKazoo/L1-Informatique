@@ -1,0 +1,27 @@
+void main() {
+    int[] tab;
+    tab = new int[20];
+    int nombre;
+    int j = 0;
+    int x = 0;
+    while (j == 0) {
+        x = 0;
+        nombre = readInteger("Entrez un nombre ");
+        if (tab[nombre] == 0) {
+            tab[nombre] += 1;
+            clear();
+        }
+        for (int i = 0; i < tab.length; i++) {
+            print(tab[i]);
+            print(",");
+            if (tab[i] == 1) {
+                x++;
+                if (x == 20) {
+                    print("Bien joué");
+                    j = 1;
+                }
+            }
+        }
+    }
+    clear();
+}
