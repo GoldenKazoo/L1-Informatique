@@ -1,0 +1,7 @@
+void main() {
+    // lecture d'une suite de vqleurs dans un tabkeau 
+    //à la fin de la lect, je veux le tableau trié
+
+    int[] tab ;
+    tab = new
+}

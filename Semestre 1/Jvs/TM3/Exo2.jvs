@@ -6,5 +6,16 @@ void main() {
      }
     
 print(a);
-        
+
+int c = 0; 
+for (int i = 0 ; i <=10000 ; i++){
+     int rdm = random(1,7);  
+    if(rdm == 6){
+c = c+1;
+    }else{
+        c = c;
+    }
+}
+c = c / 10000;
+println(c);
     }
