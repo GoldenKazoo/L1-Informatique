@@ -1,0 +1,54 @@
+void main() {
+
+    int[][] notes = new int [32][10];
+    String[][] nomprenom = new String [32][10] ;
+    String[] matiere = new String [10];
+
+    int add;
+    int delete;
+    int choix = readInt("Entrez l'action a effectuer : 1] Entrer des notes 2] Supprimer un eleve 3] Ajouter un eleve 4] Ne rien faire ");
+   int continue
+   
+    if (choix == 1){ //entrer des notes
+
+    String suite = "y" ;
+
+    while( equal(suite, "y")){
+    int eleve = readInt("Entrez un eleve");
+    int matiere = readInt("Entrez la matiere");
+    int note = readInt("Entrez la note");
+    suite = readString("Continuer a entrez des notes ? (y/n)");
+    }
+    }else if (choix == 2){ // delete un eleve
+        delete = readInt("Entrez l'eleve que vous souhaitez supprimer (De pronote bien sur)");
+        for (int k = 0 ; k < 32; k++){
+    for(int l = 0 ; l < 10 ; l++){
+        notes[delete][l] = -1;
+ }
+;
+
+}
+    }else if(choix == 3) { //add un eleve
+        for (int k = 0 ; k < 32; k++){
+        for(int l = 0 ; l < 10 ; l++){
+
+if ( notes[k][l] == -1){
+    println("Une place est disponible");
+    add = readInt("Entrez l'eleve que vous souhaitez ajouter");
+
+    for(int z = 0 ; z < 10 ; z++){
+    notes [z] [l] = notes [z][0] ;
+    }
+
+}else{ // rien faire 
+    
+
+}
+ }
+    } }else if (choix == 4 ){
+
+    }else{
+        print("Pas d'input valide");
+
+    }
+}
