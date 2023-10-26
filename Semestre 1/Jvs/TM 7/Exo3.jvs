@@ -1,0 +1,53 @@
+void main() {}
+
+void augmente2(int[] tab) {
+
+    for (int i = 0; i < tab.length; i++) {
+        tab[i] = tab[i] + 2;
+    }
+}
+
+void augmente(int[] tab, int n){
+     for (int i = 0; i < tab.length; i++) {
+        tab[i] = tab[i] + n;
+    }
+}
+
+void echange(int[] tab, int i, int j){
+    int pont = tab[i];
+    tab[i]= tab[j];
+    tab[j] = pont;
+}
+
+void rotation(int[] tab){
+    for (int i = 0; i < tab.length; i++) {
+        if(tab[i] % (tab.length) == 0){
+            tab[0] = tab[i];
+        }else{
+            tab[i] = tab [i + 1];
+        }
+    }
+}
+
+void remplissage(int[] source1, int[] source2, int[] target){
+    for (int i = 0; i < 100; i++) {
+        target[i] = 0;
+    }
+
+    if( source1.length >= target.length){
+        for (int i = 0; i < target.length; i++) {
+            target[i] = source1.length;
+        }
+    }else if(source1.length < target.length){
+            for (int i = 0; i < source1.length; i++) {
+                target[i] = source1[i];
+            }
+            int pont = source1.length;
+            for (int i = source1.length; i < target.length; i++) {
+                target[i] = source2[pont];
+                pont++;
+            }
+        }else{
+            
+        }
+}

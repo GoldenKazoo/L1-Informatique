@@ -1,0 +1,60 @@
+void main() {
+
+    int n = 2;
+
+    int[] tableau = new int[] {1, 2, 2, 2, 5};
+
+    println(sommeMultiple(tableau, n));
+}
+
+int sommeMultiple(int[] tab, int n) {
+    int somme = 0;
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i] % n == 0) {
+            somme = somme + tab[i];
+        } else {
+
+        }
+    }
+    return somme;
+}
+
+int[] tabMultiple(int[] tab, int n) {
+    int compteur = 0;
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i] % n == 0) {
+            compteur = compteur + 1;
+        } else {
+
+        }
+    }
+
+    int[] tab2 = new int[compteur];
+    int a = 0;
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i] % n == 0) {
+            tab[i] = tab2[a];
+            a = a + 1;
+        }
+    }
+
+    return tab2;
+}
+
+int[] tabHasard(int n, int h) {
+
+    int[] tab = new int[n];
+
+    for (int i = 0; i < tab.length; i++) {
+        tab[i] = random(0, h);
+    }
+    return tab;
+}
+
+int sommeHasard(int[] tab, int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum = tab[random(0, tab.length)];
+    }
+    return sum;
+}
