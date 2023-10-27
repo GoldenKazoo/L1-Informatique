@@ -3,7 +3,7 @@ int n = readInteger("Entrez les dimensions de la croix");
     String[][] croix = new String [n][n];
 
     for (int a = 0 ; a < croix.length; a++){
-    for(int b = 0 ; b <croix[a].length ; b++){
+    for(int b = 0 ; b <croix[n].length ; b++){
         croix[a][b] = "";}}
 
 for (int i = 0 ; i < croix.length ; i++){
@@ -11,6 +11,7 @@ for (int i = 0 ; i < croix.length ; i++){
         croix[i][i] = "X";
         croix[i][j] = "X";
     }
+    
 for (int k = 0 ; k < croix.length; k++){
     for(int l = 0 ; l <croix[k].length ; l++){
 print(croix[k][l]);;
