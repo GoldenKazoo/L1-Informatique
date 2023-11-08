@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="command_prompt_icon.ico">
+  </head>
+  <body>
+    <h1>Introduction</h1>
+    <p>Ce cours a vocation à m'entrainer à utiliser HTML et CSS.</p>
+    <p>
+      Il pourra cependant, je l'espere, être utilisable à la fin par quelqu'un
+      qui souhaiterai apprendre lui aussi à utiliser ces languages
+    </p>
+    <p>
+      Pour précisions, on parlera de balise paire lorsque l'on aura une balise
+      de la forme "< x >< /x >" tandis qu'on parlera de balise orpheline pour
+      les balises de la forme < x >
+    </p>
+
+    <h1>Les titres (Headings)</h1>
+    <p>
+      Pour faire apparaitre un titre on utilise la balise double < h1 >< /h1 >,
+      ces balises vont de h1 à h6 allant du titre le plus grand au plus petit :
+    </p>
+    <h2>Titre 1</h2>
+    <h3>Titre 1</h3>
+    <h4>Titre 1</h4>
+    <h5>Titre 1</h5>
+    <h6>Titre 1</h6>
+
+    <h1>Textes et paragraphes</h1>
+    <p>
+      On peut écrire du texte en tapant simplement du texte dans le logiciel de
+      traitement de texte. <br />
+      Cependant les retours à la ligne ne seront pas pris en compte, pour
+      revenir à la ligne il faudra utiliser la balise orpheline < br > :
+
+     <p> Mot1 <br> Mot2 <br> Mot3 <br> Mot4 <br> Mot5 <br> </p>
+    </p>
+    <p>Pour écrire un paragraphe, on utilise la balise double < p >< /p >, voici comment cela rends à l'écran : 
+    
+<p>Voici le premier paragraphe, il est composé de plusieurs mots.</p>
+<p>Voici le deuxieme paragraphe, il est composé de plusieurs mots.</p>
+<p>Voici le troisieme paragraphe, il est composé de plusieurs mots.</p>
+
+<p>On remarque que des paragraphes ont été crées.</p>
+
+    
+    </p>
+    <h1> Les liens</h1>
+    <p>Pour inserer des liens sur une page, on utilise la balise < a href="(LeLien)" > (Nom du lien) < /a > :
+    <a href="https://fr.wikipedia.org/wiki/Rickroll">C'est un lien</a></p>
+
+    <h1> Les images</h1>
+    <p>Pour inserer des images sur une page, on utilise la balise < img src="(FichierImage)" alt="(TitreSiProbleme)" width="(largeur)" height="(longueur)"> : <br><br>
+
+        <img src="AigisChocoMilk.png" alt="TitreSiProbleme" width="300" height="300">
+
+        <img src="VibeAigis.gif" alt="TitreSiProbleme" width="500" height="300">
+
+        <h1> Les vidéos</h1>
+        <p>Pour inserer une vidéo sur une page, on utilise la balise 
+         <p>   < video width="(largeur)" height="(hauteur)" (controls ou autoplay)> <br>
+                < source src="(FichierVideo)" type="video/(formatdelavideo)> <br>
+        
+        
+              < /video > 
+              <p> Attention si on met autoplay il peut arriver que la vidéo ne se lance pas car les navigateurs l'ont bloqué pour des raisons de sécurité, en ajoutant muted derriere elle se lancera mais sans son. </p>
+            </p>
+            <video width="320" height="240" controls>
+                <source src="Specialist.mp4" type="video/mp4">
+            
+              </video> 
+
+              <video width="320" height="240" autoplay muted>
+                <source src="Specialist.mp4" type="video/mp4">
+            
+              </video> 
+            </p>
+  </body>
+</html>
