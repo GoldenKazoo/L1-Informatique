@@ -1,0 +1,7 @@
+void main() {
+    int age;
+    age = readInt(" Quel age avez vous ? ");
+    print("Vous avez ");
+    print(age);
+    print(" ans");
+}
