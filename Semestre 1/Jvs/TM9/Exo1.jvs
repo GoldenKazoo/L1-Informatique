@@ -12,7 +12,17 @@ boolean candidatsEx(int[][] votes, int nbcandidats) {
     return v;
 }
 
-
+boolean uniquePref(int[][] votes, int candidat){
+    boolean v = true;
+    for (int i = 0; i < votes.length; i++) {
+        for (int j = 0; j < votes.length; j++) {
+            if (votes[i][j] == 0) {
+                v = false;
+            }
+        }
+    }
+    return v;
+}
 
 boolean prefCorrect(int[][] votes) {
     for (int i = 0; i < votes.length; i++) {
@@ -26,6 +36,25 @@ boolean prefCorrect(int[][] votes) {
         }
     }
     return true;
+}
+
+boolean verifieVote(int[][] votes, int nbcandidats){
+    boolean v = true;
+
+    if(candidatsEx (votes ,nbcandidats) = false){
+        v = false;
+        return v;
+    } else if (uniquePref(votes, nbcandidats = false)){
+        v = false;
+        return v;
+    }else if (prefCorrect(votes) == false ){
+        v = false; 
+        return v;
+    
+    }else{
+        return v;
+    }
+    
 }
 
 

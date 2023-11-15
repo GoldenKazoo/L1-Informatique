@@ -29,8 +29,7 @@ boolean appartient(int[] tab, int n) {
         }
     }
     return v;
-}
-
+}   
 boolean paire(int[] tab) {
     boolean v = false;
     for (int i = 1; i < tab.length; i++) {
