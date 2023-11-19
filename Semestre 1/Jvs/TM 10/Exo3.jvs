@@ -1,0 +1,124 @@
+class Personne {
+    String nom;
+    String prenom;
+    int age;
+    double taille;
+}
+
+void anniversaire(Personne p) {
+    p.age = p.age + 1;
+}
+
+Personne plusGrand(Personne p1, Personne p2) {
+    Personne pnull = new Personne();
+    pnull.nom = "Meme";
+    pnull.prenom = "Taille";
+    pnull.age = 0;
+    pnull.taille = p1.taille;
+    if (p1.taille > p2.taille) {
+        return p1;
+    } else if (p1.taille < p2.taille) {
+        return p2;
+    } else {
+        return pnull;
+    }
+}
+
+boolean estPlusJeune(Personne p1, Personne p2) {
+    Personne pnull = new Personne();
+    pnull.nom = "Meme";
+    pnull.prenom = "Taille";
+    pnull.age = 0;
+    pnull.taille = p1.age;
+    if (p1.taille < p2.age) {
+        return true;
+    } else if (p1.age > p2.age) {
+        return false;
+    } else {
+        return false;
+    }
+}
+
+void saisirFichePerso(Personne personne) {
+
+    personne.nom = readString("Entrez votre nom");
+    ;
+    personne.prenom = readString("Entrez votre prenom");
+    ;
+    personne.age = readInteger("Entrez votre age");
+    personne.taille = readDouble("Entrez votre taille");
+
+    ;
+}
+
+void afficherFichePerso(Personne p) {
+
+    println("----------------------------------------------");
+    println("||  Nom  ||  Prenom  ||   Age    ||  Taille ||");
+    println("----------------------------------------------");
+    print("||  ");
+    print(p.nom);
+    print(" ||  ");
+    print(p.prenom);
+    print("   ||  ");
+    print(p.age);
+    print(" ans");
+    print("  ||    ");
+    print(p.taille);
+    print("  ||");
+    println("");
+    println("----------------------------------------------");
+}
+
+int agesPersonnes(Personne[] tabP) {
+    int somme = 0;
+    for (int i = 0; i < tabP.length; i++) {
+        somme = tabP[i].age;
+    }
+    int moyenne = somme / tabP.length;
+    return moyenne;
+}
+
+Personne trouvePersonne(Personne[] tabP, String nom) {
+    Personne p = null;
+    for (int i = 0; i < tabP.length; i++) {
+        if (equal(tabP[i].nom, nom)) {
+            p = tabP[i];
+        }
+    }
+    return p;
+}
+
+void main() {
+    Personne p1 = new Personne();
+    Personne p2 = new Personne();
+    Personne p3 = new Personne();
+    Personne p4 = new Personne();
+    Personne p5 = new Personne();
+    Personne p6 = new Personne();
+    Personne p7 = new Personne();
+    Personne p8 = new Personne();
+    Personne p9 = new Personne();
+    Personne p10 = new Personne();
+
+    Personne[] tabP = new Personne[] {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10};
+    Personne p = new Personne();
+    saisirFichePerso(p);
+
+    for (int i = 0; i < tabP.length; i++) {
+        saisirFichePerso(tabP[i]);
+    }
+
+    agesPersonnes(tabP);
+    String enternom = readString("Est ce que ? apparait dans la liste de personnes ?");
+    trouvePersonne(tabP,enternom);
+    anniversaire(p1);
+    afficherFichePerso(p1);
+    afficherFichePerso(plusGrand(p1, p2));
+
+    if (estPlusJeune(p1, p2) == true) {
+        afficherFichePerso(p1);
+    } else {
+        afficherFichePerso(p2);
+    }
+}

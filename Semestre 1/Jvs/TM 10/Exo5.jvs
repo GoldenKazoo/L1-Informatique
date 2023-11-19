@@ -1,0 +1,16 @@
+class Article {
+    String nom;
+    double prix;
+}
+
+
+class Panier {
+    Article [] article;
+    int nbArticles;
+}
+
+Panier initialiserPanier(){
+    Panier panier = new Panier();
+    panier.nbArticles = 5;
+    panier.article = new Article [panier.nbArticle];
+}

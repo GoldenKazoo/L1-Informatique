@@ -1,0 +1,25 @@
+/*
+Exercice sur feuille :
+
+1. Dans quelle partie du code est déclarée la structure ?
+2. Est ce qu’on peut parcourir une structure à l’aide d’une boucle for ?
+3. Est ce que la taille de la structure dépend de la taille des données ?
+4. Est ce qu’une structure peut contenir des données de type structure ?
+5. Est ce que les noms des cases peuvent être définies à l’interieur du main ?
+6. Tableaux versus structures :
+On souhaite modéliser les points dans un espace à 3 dimensions. On peut, au choix, modéliser un point soit par
+un tableau de 3 éléments de type double : double [] p = new double[3]; , soit par une structure,
+de la manière suivante :
+class Point{
+double x;
+double y;
+double z;
+}
+que l’on utilise dans le corps de la manière suivante : Point p = new Point();
+(a) Quels sont les avantages et les inconvénients de chaque approche ?
+(b) On souhaite maintenant stocker plusieurs points (pour par exemple faire un dessin). Comment procédez-
+vous, pour chaque modélisation ?
+7. Le constructeur d’une classe (ie. l’appel new Point() dans l’exemple précédent) sert-il à déclarer ou bien
+initialiser une variable (ou les deux) ?
+
+*/

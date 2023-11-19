@@ -1,0 +1,53 @@
+class Personne {
+    String nom;
+    String prenom;
+    int age;
+    double taille;
+}
+
+void main() {
+    Personne personne = new Personne();
+    /*Personne personne = new Personne();
+    personne.nom = "Bros";
+    personne.prenom = "Mario";
+    personne.age = 35;
+    personne.taille = 1.50;
+    afficherFichePerso(personne);*/
+saisirFichePerso(personne);
+
+afficherFichePerso(personne);
+    
+
+}
+
+void saisirFichePerso(Personne personne) {
+
+    personne.nom = readString("Entrez votre nom");
+    ;
+    personne.prenom = readString("Entrez votre prenom");
+    ;
+    personne.age = readInteger("Entrez votre age");
+    personne.taille = readDouble("Entrez votre taille");
+
+    ;
+}
+
+void afficherFichePerso(Personne p) {
+     
+     println("----------------------------------------------");
+    println("||  Nom  ||  Prenom  ||   Age    ||  Taille ||");
+    println("----------------------------------------------");
+    print("||  ");
+    print(p.nom);
+    print(" ||  ");
+    print(p.prenom);
+    print("   ||  ");
+    print(p.age);
+    print(" ans");
+    print("  ||    ");
+    print(p.taille);
+    print("  ||");
+    println("");
+    println("----------------------------------------------");
+    
+}
