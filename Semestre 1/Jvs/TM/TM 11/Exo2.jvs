@@ -1,0 +1,106 @@
+class Individu {
+    String nom;
+    String prenom;
+    Individu pere;
+    Individu mere;
+}
+
+class Famille {
+    Individu[] famille;
+}
+
+Famille fam() {
+
+    Individu Abraham = new Individu();
+    Abraham.nom = "Simpson";
+    Abraham.prenom = "Abraham";
+    Abraham.pere = null;
+    Abraham.mere = null;
+
+    Individu Mona = new Individu();
+    Mona.nom = "Olsen";
+    Mona.prenom = "Mona";
+    Mona.pere = null;
+    Mona.mere = null;
+
+    Individu Jacqueline = new Individu();
+    Jacqueline.nom = "Bouvier";
+    Jacqueline.prenom = "Jacqueline";
+    Jacqueline.pere = null;
+    Jacqueline.mere = null;
+
+    Individu Clancy = new Individu();
+    Clancy.nom = "Bouvier";
+    Clancy.prenom = "Clancy";
+    Clancy.pere = null;
+    Clancy.mere = null;
+
+    Individu Herbert = new Individu();
+    Herbert.nom = "Powell";
+    Herbert.prenom = "Herbert";
+    Herbert.pere = Abraham;
+    Herbert.mere = Mona;
+
+    Individu Homer = new Individu();
+    Homer.nom = "Simpson";
+    Homer.prenom = " Homer";
+    Homer.pere = Abraham;
+    Homer.mere = Mona;
+
+    Individu Marge = new Individu();
+    Marge.nom = "Simpson";
+    Marge.prenom = "Marge";
+    Marge.pere = Jacqueline;
+    Marge.mere = Clancy;
+
+    Individu Patty = new Individu();
+    Patty.nom = "Bouvier";
+    Patty.prenom = "Patty";
+    Patty.pere = Jacqueline;
+    Patty.mere = Clancy;
+
+    Individu Selma = new Individu();
+    Selma.nom = "Bouvier";
+    Selma.prenom = "Selma";
+    Selma.pere = Jacqueline;
+    Selma.mere = Clancy;
+
+    Individu Bart = new Individu();
+    Bart.nom = "Simpson";
+    Bart.prenom = "Bart";
+    Bart.pere = Homer;
+    Bart.mere = Marge;
+
+    Individu Lisa = new Individu();
+    Lisa.nom = "Simpson";
+    Lisa.prenom = "Lisa";
+    Lisa.pere = Homer;
+    Lisa.mere = Marge;
+
+    Individu Maggie = new Individu();
+    Maggie.nom = "Simpson";
+    Maggie.prenom = "Maggie";
+    Maggie.pere = Homer;
+    Maggie.mere = Marge;
+
+    Individu Ling = new Individu();
+    Ling.nom = "Bouvier";
+    Ling.prenom = "Ling";
+    Ling.pere = null;
+    Ling.mere = Selma;
+
+    Famille famille = new Famille [12];
+    famille[0] = Abraham;
+    famille[1] = Mona;
+    famille[2] = Herbert;
+    famille[3] = Homer;
+    famille[4] = Marge;
+    famille[5] = Bart;
+    famille[6] = Lisa;
+    famille[7] = Maggie;
+    famille[8] = Jacqueline;
+    famille[9] = Clancy;
+    famille[10] = Patty;
+    famille[11] = Selma;
+    famille[12] = Ling;
+}
