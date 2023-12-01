@@ -19,3 +19,7 @@ void main() {
     a1 = saisirArticle("Chaussette", 5.0);
     afficherArticle(a1);
 }
+
+void main() {
+    for (int i = 0; i < 100; i++) {}
+}
