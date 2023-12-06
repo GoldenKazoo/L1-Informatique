@@ -1,0 +1,25 @@
+void main() {
+    int[] tab1;
+    int[] tab2;
+    int[] tab_final;
+    int t1 = readInteger("Donnez la taille du tableau 1");
+    int t2 = readInteger("Donnez la taille du tableau 2");
+    tab1 = new int[t1];
+    tab2 = new int[t2];
+    tab_final = new int[t2];
+
+    for (int i = 0; i < tab1.length; i++) {
+        tab1[i] = readInteger("valeur dans le tab1");
+    }
+    for (int j = 0; j < tab1.length; j++) {
+        tab2[j] = readInteger("valeur dans le tab2");
+    }
+    if (tab1.length == tab2.length) {
+        for (int i = 0; i < tab_final.length; i++) {
+            tab_final[i] = tab1[i] + tab2[i];
+            print(tab_final[i] + " ");
+        }
+    } else {
+        print("Error");
+    }
+}

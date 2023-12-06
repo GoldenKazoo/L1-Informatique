@@ -1,0 +1,18 @@
+Selectionner un element dans une table :
+SELECT [categorie de la table] FROM [la table] 
+
+Selectionner un element dans une table avec une condition dessus :
+- SELECT [categorie de la table] FROM [la table] WHERE [la condition]
+- SELECT [categorie de la table], [categorie de la table] FROM [la table] WHERE [la condition]
+
+Les conditions : 
+- Si la categorie repertorie des ints, on utilise ><=
+- Si la categorie repertorie des strings, on utilise ' '
+- Si la categorie repertorie des valeurs non entrées, on utilise IS NULL
+- Si on veut mettre plusieurs conditions, on utilise AND 
+- Si on veut mettre un "OU", on utilise OR
+- Si on veut donner un intervalle, on peut utiliser BEETWEEN
+- Si on veut un mot qui commence par x, on utilise x%
+- Si on veut un mot qui contient x, on utilise %x%
+- Si on veut un mot qui fini par x, on utilise %x
+- 

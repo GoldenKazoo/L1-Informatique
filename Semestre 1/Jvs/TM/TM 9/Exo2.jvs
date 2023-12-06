@@ -3,3 +3,7 @@ void main() {}
 int compteVote(int[][] votes, int candidat) {
     return votes[candidat].length;
 }
+
+int gagnant(int[][] votes, int nbcandidats){
+    for()
+}

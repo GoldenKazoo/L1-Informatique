@@ -1,3 +1,5 @@
+void main() {}
+
 class Individu {
     String nom;
     String prenom;
@@ -9,7 +11,7 @@ class Famille {
     Individu[] famille;
 }
 
-Famille fam() {
+Famille creerFamilleSimpson() {
 
     Individu Abraham = new Individu();
     Abraham.nom = "Simpson";
@@ -89,18 +91,8 @@ Famille fam() {
     Ling.pere = null;
     Ling.mere = Selma;
 
-    Famille famille = new Famille [12];
-    famille[0] = Abraham;
-    famille[1] = Mona;
-    famille[2] = Herbert;
-    famille[3] = Homer;
-    famille[4] = Marge;
-    famille[5] = Bart;
-    famille[6] = Lisa;
-    famille[7] = Maggie;
-    famille[8] = Jacqueline;
-    famille[9] = Clancy;
-    famille[10] = Patty;
-    famille[11] = Selma;
-    famille[12] = Ling;
+    Famille famille = new Famille {Abraham;Mona,Herbert,Homer,Marge,Bart,Lisa,Maggie,Jacqueline,Clancy,Patty,Selma,Ling};
+
+famille[] =
+    return famille;
 }

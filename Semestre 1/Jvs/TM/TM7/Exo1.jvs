@@ -1,0 +1,54 @@
+void main() {
+
+    int n = 0;
+
+    int[] tableau = new int[] {1, 2, 2, 2, 5};
+    println(somme(tableau));
+
+    println(appartient(tableau, n));
+
+    println(paire(tableau));
+
+    println(brelan(tableau));
+}
+
+int somme(int[] tab) {
+    int x = 0;
+    for (int i = 0; i < tab.length; i++) {
+        x = x + tab[i];
+    }
+    return x;
+}
+
+boolean appartient(int[] tab, int n) {
+    boolean v = false;
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i] == n) {
+            v = true;
+        } else {
+        }
+    }
+    return v;
+}   
+boolean paire(int[] tab) {
+    boolean v = false;
+    for (int i = 1; i < tab.length; i++) {
+
+        if (tab[i] == tab[i - 1]) {
+            return true;
+        } else {
+        }
+    }
+    return v;
+}
+
+boolean brelan(int[] tab) {
+    boolean v = false;
+    for (int i = 2; i < tab.length; i++) {
+        if (tab[i] == tab[i - 1] && tab[i] == tab[i - 2]) {
+            return true;
+        } else {
+        }
+    }
+    return v;
+}

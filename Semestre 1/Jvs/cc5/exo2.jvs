@@ -1,0 +1,74 @@
+final String nom = "Martin"; // On peut mettre readString pour generaliser et demander un nom 
+
+class Equipe {
+    String tache;
+    Membre[] listembr;
+}
+
+class Membre {
+    int[] accesbureau;
+    String nom;
+}
+
+void main() {
+    Membre martin = new Membre();
+    martin.nom = "Martin";
+    martin.accesbureau = new int[] {234, 345};
+
+    Membre anne = new Membre();
+    anne.nom = "Anne";
+    anne.accesbureau = new int[] {131};
+
+    Equipe equipe = new Equipe();
+    equipe.tache = "Developpeur";
+    equipe.listembr = new Membre[] {martin, anne};
+    affiche(equipe);
+    nompresent(equipe, nom);
+}
+
+void affiche(Equipe e) {  // fonction qui affiche tout
+    println("Cette equipe est assigne a la tache suivante : " + e.tache);
+    println(" ");
+    println("Membres de l'equipe : ");
+
+    for (int i = 0; i < e.listembr.length; i++) {
+        print(e.listembr[i].nom + " : " + "Bureau ");
+        salles(e.listembr[i]);
+    }
+    Boolean presence = nompresent(e, nom);
+    affichepresence (nom, presence);
+}
+
+void salles(Membre m) {   // fonction qui enumere les salles d'un membre
+    if (m.accesbureau.length == 1) {
+        print(m.accesbureau[0]);
+    } else {
+        for (int i = 0; i < m.accesbureau.length; i++) {
+            if(i == m.accesbureau.length -1){
+                print(m.accesbureau[i]);
+            }else{
+                print(m.accesbureau[i] + " , ");
+            }
+        }
+    } println("");
+}
+
+boolean nompresent(Equipe e, String nom) {   //fonction qui verifie la presence d'un membre dans l'equipe
+    boolean verif = false;
+    for (int i = 0; i < e.listembr.length; i++) {
+        if (equal(e.listembr[i].nom, nom)) {
+            verif = true;
+        } else {
+        }
+    }
+    return verif;
+}
+
+void affichepresence (String a, boolean b){ // fonction qui affiche la presence du membre
+println("");
+    if(b == true){
+        println ( a + " appartient a cette equipe");
+    }else{
+       println (a + " n'appartient pas a cette equipe"); 
+    }
+}

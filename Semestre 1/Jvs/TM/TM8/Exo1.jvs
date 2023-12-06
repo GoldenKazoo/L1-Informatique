@@ -1,0 +1,175 @@
+void main() {
+    test_somme();
+    println(" ");
+    test_appartient();
+    println(" ");
+    test_paire();
+    println(" ");
+    test_brelan();
+}
+
+int somme(int[] tab) {
+    int x = 0;
+    for (int i = 0; i < tab.length; i++) {
+        x = x + tab[i];
+    }
+    return x;
+}
+
+boolean appartient(int[] tab, int n) {
+    boolean v = false;
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i] == n) {
+            v = true;
+        } else {
+        }
+    }
+    return v;
+}
+
+boolean paire(int[] tab) {
+    boolean v = false;
+    for (int i = 1; i < tab.length; i++) {
+
+        if (tab[i] == tab[i - 1]) {
+            return true;
+        } else {
+        }
+    }
+    return v;
+}
+
+boolean brelan(int[] tab) {
+    boolean v = false;
+    for (int i = 2; i < tab.length; i++) {
+        if (tab[i] == tab[i - 1] && tab[i] == tab[i - 2]) {
+            return true;
+        } else {
+        }
+    }
+    return v;
+}
+
+void test_appartient() {
+    int[] tab = new int[0];
+    println(appartient(tab, 5));
+    tab = new int[] {34};
+    println(appartient(tab, 5));
+    tab = new int[] {5, -12, 32, 21, 25};
+    println(appartient(tab, 25));
+    tab = new int[] {100, -21, 20, 23, 1, -2, 0, 7, 0, 13};
+    println(appartient(tab, 100));
+    tab = new int[] {-14, -2, -32, -14, -54, -34};
+    println(appartient(tab, -14));
+    tab = new int[] {-45, -32, -51, -4, -13, -55, -45, -100, -12, -49};
+    println(appartient(tab, 45));
+    tab =
+            new int[] {
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
+            };
+    println(appartient(tab, 11));
+    tab =
+            new int[] {
+                4, 3, 5, 7, 1, 2, -3, 2, 7, 11, 4, 5, 3, 9, 12, 76, 31, 31, 223, 1, 5, 0, -23,
+                -23, -100
+            };
+    println(appartient(tab, 6));
+    tab = new int[] {2, 3};
+    println(appartient(tab, -3));
+    tab = new int[10];
+    println(appartient(tab, 0));
+}
+
+void test_somme() {
+    int[] tab = new int[0];
+    println(somme(tab));
+    tab = new int[] {34};
+    println(somme(tab));
+    tab = new int[] {5, -12, 32, 21, 25};
+    println(somme(tab));
+    tab = new int[] {100, -21, 20, 23, 1, -2, 0, 7, 0, 13};
+    println(somme(tab));
+    tab = new int[] {-5, -2, -32, -14, -54, -34};
+    println(somme(tab));
+    tab = new int[] {-45, -32, -51, -4, -13, -55, -45, -100, -12, -49};
+    println(somme(tab));
+    tab =
+            new int[] {
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
+            };
+    println(somme(tab));
+    tab =
+            new int[] {
+                4, 3, 5, 7, 1, 2, -3, 2, 7, 11, 4, 5, 3, 9, 12, 76, 31, 31, 223, 1, 5, 0, -23,
+                -23, -100
+            };
+    println(somme(tab));
+    tab = new int[] {2, 3};
+    println(somme(tab));
+    tab = new int[10];
+    println(somme(tab));
+}
+
+void test_paire() {
+    int[] tab = new int[0];
+    println(paire(tab));
+    tab = new int[] {34};
+    println(paire(tab));
+    tab = new int[] {5, -12, 5, 21, 25};
+    println(paire(tab));
+    tab = new int[] {100, -21, 21, 23, 1, -2, 0, 7, 0, 13};
+    println(paire(tab));
+    tab = new int[] {-5, -32, -32, -14, -54, -34};
+    println(paire(tab));
+    tab = new int[] {-32, -32, -51, -4, -13, -55, -45, -100, -12, -49};
+    println(paire(tab));
+    tab =
+            new int[] {
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
+            };
+    println(paire(tab));
+    tab =
+            new int[] {
+                4, 3, 5, 7, 1, 2, -3, 2, 7, 11, 4, 5, 3, 9, 12, 76, 31, 31, 223, 1, 5, 0, -23,
+                -23
+            };
+    println(paire(tab));
+    tab = new int[] {2, 3};
+    println(paire(tab));
+    tab = new int[10];
+    println(paire(tab));
+}
+
+void test_brelan() {
+    int[] tab = new int[0];
+    println(brelan(tab));
+    tab = new int[] {34};
+    println(brelan(tab));
+    tab = new int[] {5, -12, 5, 5, 21};
+    println(brelan(tab));
+    tab = new int[] {100, -21, 21, 21, 1, -21, 0, 21, 0, 13};
+    println(brelan(tab));
+    tab = new int[] {-5, -32, -32, -32, -54, -34};
+    println(brelan(tab));
+    tab = new int[] {-32, -32, -32, -4, -13, -55, -45, -100, -12, -49};
+    println(brelan(tab));
+    tab =
+            new int[] {
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+                12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
+            };
+    println(brelan(tab));
+    tab =
+            new int[] {
+                4, 3, 5, 7, 1, 2, -3, 2, 7, 11, 4, 5, 3, 9, 12, 76, 31, 31, 223, 1, 5, -23, -23,
+                -23
+            };
+    println(brelan(tab));
+    tab = new int[] {2, 2};
+    println(brelan(tab));
+    tab = new int[10];
+    println(brelan(tab));
+}

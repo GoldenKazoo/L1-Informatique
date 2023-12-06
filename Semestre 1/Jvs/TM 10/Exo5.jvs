@@ -1,0 +1,106 @@
+final int MAXart = 3;
+
+class Panier {
+    Article[] article;
+    int nbArticles;
+}
+
+class Article {
+    String nom;
+    double prix;
+}
+
+void afficherArticle(Article a) {
+    if (a == null) {
+        print("");
+    } else {
+
+        print("L'article " + a.nom + " coûte " + a.prix + " euros.");
+    }
+}
+
+Panier initialiserPanier() {
+    Panier panier = new Panier();
+    panier.nbArticles = 0;
+    panier.article = new Article[MAXart];
+    return panier;
+}
+
+void afficherPanier(Panier p) {
+    println("Votre panier contient " + p.nbArticles + " articles :");
+
+    for (int i = 0; i < p.article.length; i++) {
+        afficherArticle(p.article[i]);
+        println("");
+    }
+}
+
+double prixTotal(Panier p) {
+    double somme = 0.0;
+
+    for (int i = 0; i < p.article.length; i++) {
+        if (p.article[i] == null) {
+            somme = somme;
+        } else {
+            somme = somme + p.article[i].prix;
+        }
+    }
+    return somme;
+}
+
+boolean panierPlein(Panier p) {
+    boolean verif = false;
+    if (p.article.length == p.nbArticles) {
+        verif = true;
+    } else {
+    }
+    return verif;
+}
+
+Panier ajouterArticle(Panier p, Article a) {
+    if (panierPlein(p) == false) {
+        /*for (int i = 0; i < p.article.length; i++) {
+            if (p.article[i] == null) {
+                p.article[i] = a;
+            } else {
+
+            }
+        }*/
+        int incr = 0;
+        while (p.article[incr] != null) {
+            incr++;
+        }
+        p.article[incr] = a;
+    }
+    return p;
+}
+
+Article saisirArticle(String nomArticle, double prixArticle) {
+    Article a = new Article();
+    a.nom = nomArticle;
+    a.prix = prixArticle;
+    return a;
+}
+
+void main() {
+    Panier p = initialiserPanier();
+    Article a = null;
+    int nb = readInt("Combien d'articles allez vous entrer ?");
+    p.nbArticles = nb;
+    if (nb > MAXart) {
+        println(
+                "Panier trop grand, veuillez entrer un panier qui a une taille inferrieur ou egale a : "
+                        + MAXart);
+    } else {
+        for (int i = 0; i < nb; i++) {
+
+            ajouterArticle(
+                    p,
+                    saisirArticle(
+                            readString("Entrez le nom de l'article"),
+                            readDouble("Entrez le prix de l'article")));
+        }
+        afficherPanier(p);
+        println("Prix total = " + prixTotal(p));
+    }
+}

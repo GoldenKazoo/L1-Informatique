@@ -1,0 +1,21 @@
+class Equipe {
+    String logo;
+    Employe [] membres;
+}
+class Employe {
+    String nom;
+    int age;
+}
+
+
+void main() {
+    Equipe[] compagnie = new Equipe[4];
+    Equipe equipe2 = new Equipe ();
+    compagnie[1] = equipe2;
+    compagnie[1].logo = "equipeIA"; // instruction (*)
+    compagnie[1].membres = new Employe[2];
+    Employe adrien = new Employe();
+    adrien.nom = "Adrien";
+    adrien.age = 22;
+    compagnie[1].membres[0] = adrien;
+}
