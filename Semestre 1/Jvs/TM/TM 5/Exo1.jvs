@@ -1,0 +1,17 @@
+void main() {
+    int t = readInteger("Entrez combien de nombres vous allez entrer");
+    int[] tab = new int[t];
+    for(int i = 0 ; i<tab.length ; i++){
+        tab[i]= readInteger("Entrez un nombre");
+        println(tab[i]);
+    }
+    print("------------------------------------------------");
+    println("");
+int p = readInteger("Entrez la permutation");
+int[] tab2 = new int[t];
+    for(int i = 0 ; i< tab.length ; i++){
+        tab2[i] = tab[(i + p-1) % (tab.length)];
+        println(tab2[i]);
+           
+    }
+    }

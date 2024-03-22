@@ -1,0 +1,133 @@
+class Magasin {
+    String nom;
+    Produit[] produits;
+    int nbProduits;
+    String ville;
+}
+
+class Produit {
+    String nom;
+    int variante;
+    Magasin[] magasins;
+    int nbMagasins;
+}
+
+Magasin creationMagasin(String nom, String ville) {
+    Magasin m = new Magasin();
+    m.nom = nom;
+    m.ville = ville;
+    m.nbProduits = 0;
+    m.produits = new Produit[m.nbProduits];
+    return m;
+}
+
+Produit creationProduit(String nom, int variante) {
+
+    Produit p = new Produit();
+    p.nom = nom;
+    p.variante = variante;
+    p.magasins = new Magasin[0];
+    p.nbMagasins = p.magasins.length;
+
+    return p;
+}
+
+void ajouterProduit(Produit p, Magasin m) {
+    m.nbProduits = m.nbProduits + 1;
+    Produit[] produitsbis = new Produit[m.nbProduits];
+    for (int i = 0; i < m.produits.length; i++) {
+        produitsbis[i] = m.produits[i];
+    }
+    produitsbis[m.nbProduits] = p;
+}
+
+void ajouterMagasin(Magasin m, Produit p) {
+    p.nbMagasins = p.nbMagasins + 1;
+
+    Magasin[] magasinsbis = new Magasin[p.nbMagasins];
+    for (int i = 0; i < p.magasins.length; i++) {
+        magasinsbis[i] = p.magasins[i];
+    }
+    magasinsbis[p.nbMagasins] = m;
+}
+
+boolean inventaire(Produit p, Magasin m) {
+    boolean verif = false;
+    for (int i = 0; i < m.produits.length; i++) {
+        if (equal(p.nom, m.produits[i].nom) && (p.variante == m.produits[i].variante)) {
+            verif = true;
+        } else {
+
+        }
+    }
+    return verif;
+}
+
+boolean enVente(Magasin m, Produit p) {
+    boolean verif = false;
+    for (int i = 0; i < m.produits.length; i++) {
+        if (m.produits[i] == p) {
+            verif = true;
+        } else {
+
+        }
+    }
+    return verif;
+}
+
+boolean auMoinsDeux(Produit p, Magasin[] mag, String ville) {
+
+    int compteur = 0;
+    for (int i = 0; i < mag.length; i++) {
+        if (enVente(mag[i], p) == true && equal(mag[i].ville, ville)) {
+            compteur = compteur + 1;
+        }
+    }
+    if (compteur < 2) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+boolean coherenceProd(Produit p, Magasin m) {
+    if (enVente(m, p) == true && inventaire(p, m) == false) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+boolean coherenceMag(Produit p, Magasin m) {
+    if (enVente(m, p) == false && inventaire(p, m) == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void rendreCoherent(Produit p, Magasin m) {
+    if (coherenceProd(p, m) == true) {
+        p.nbMagasins = p.nbMagasins + 1;
+        Magasin[] magasinsbis = new Magasin[p.nbMagasins];
+        for (int i = 0; i < p.magasins.length; i++) {
+            magasinsbis[i] = p.magasins[i];
+        }
+        magasinsbis[p.nbMagasins] = m;
+    } else if (coherenceMag(p, m) == true) {
+        if (coherenceProd(p, m) == true) {
+
+            m.nbProduits = m.nbProduits + 1;
+            Produit[] produitsbis = new Produit[m.nbProduits];
+            for (int i = 0; i < m.produits.length; i++) {
+                produitsbis[i] = m.produits[i];
+            }
+            produitsbis[m.nbProduits] = p;
+
+        } else {
+
+        }
+    }
+}
+
+void main() {}

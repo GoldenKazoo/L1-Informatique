@@ -1,0 +1,59 @@
+void main() {
+    int n = readInteger("Entrez la taille du tableau");
+    boolean[][] plan = new boolean[n][n];
+
+    /*   int x = readInteger("Entrez la coordonnées en x");
+        int y = readInteger("Entrez la coordonnées en y");
+
+      plan[x][y] = true;
+        plan[x + 1][y + 1] = true;
+        plan[x + 1][y] = true;
+        plan[x][y + 1] = true;
+
+        for (int i = 0; i < plan.length; i++) {
+            for (int j = 0; j < plan.length; j++) {
+                if (plan[i][j] == true) {
+                    print("O");
+                } else {
+                    print(" ");
+                }
+            }
+            println("");
+        }
+
+    */
+    int compteur = 0;
+    sleep(100);
+    clear();
+    while (compteur < 10) {
+        int b = 0;
+        for (int i = 0; i < n - 1; i++) {
+            int a = i;
+
+            plan[a][b] = true;
+            plan[a + 1][b] = true;
+            plan[a][b + 1] = true;
+            plan[a + 1][b + 1] = true;
+
+            for (int k = 0; k < plan.length; k++) {
+                for (int l = 0; l < plan.length; l++) {
+                    if (plan[k][l] == true) {
+                        print("O");
+                    } else {
+                        print(" ");
+                    }
+                }
+                println("");
+            }
+            for (int leona = 0; leona < plan.length; leona++) {
+                for (int rakan = 0; rakan < plan.length; rakan++) {
+                    plan[leona][rakan] = false;
+                }
+            }
+            sleep(100);
+            clear();
+        }
+
+        compteur++;
+    }
+}

@@ -1,0 +1,33 @@
+void main() {
+    int n = random(1, 4);
+
+    print(" ( ");
+
+    if (n == 1) {
+
+        print(" o ");
+
+    } else {
+        if (n == 2) {
+
+            print("*");
+
+        } else {
+            print("-");
+        }
+    }
+    print(" _ ");
+
+    n = random(1, 4);
+
+    if (n == 1) {
+        print(" o ");
+    } else {
+        if (n == 2) {
+            print("*");
+        } else {
+            print("-");
+        }
+    }
+    println(" ) ");
+}

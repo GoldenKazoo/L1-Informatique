@@ -1,0 +1,13 @@
+void main() {
+    // Variables
+    int age;
+    String nom;
+    String prenom;
+
+    // User enters
+    age = readInt(" Quel est votre age ? ");
+    nom = readString("Quel est votre nom ?");
+    prenom = readString("Quel est votre prenom ?");
+
+    print(prenom + " " + nom + ", " + age + " ans");
+}

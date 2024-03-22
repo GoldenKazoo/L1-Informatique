@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+        <title>Messaging</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                background-color: #d9e3d9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div
+            class="container-fluid h-100 rounded"
+            style="background-color: #f2fdf2; max-width: 1100px; max-height: 700px"
+        >
+            <div class="row h-100 rounded">
+                <div class="col-5 p-0">
+                    <div class="">
+                        <h2 class="m-0 p-3 ps-4">Recent</h2>
+                    </div>
+
+                    <div class="bg-primary p-3 d-flex align-items-center justify-content-between">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="128px"
+                            height="fit-content"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="white"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <line x1="9" y1="10" x2="9.01" y2="10"></line>
+                            <line x1="15" y1="10" x2="15.01" y2="10"></line>
+                            <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path>
+                        </svg>
+
+                        <div class="ms-3 fst-italic text-light">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="fst-normal mb-1">John Doe</div>
+                                </div>
+                                <span class="badge">25 Dec</span>
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore.
+                        </div>
+                    </div>
+
+                    <div class="bg-light p-3 d-flex border">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 50 50"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            width="64px"
+                            height="fit-content"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="1.414"
+                        >
+                            <path
+                                d="M33,29c-1.795,0 -3,1.515 -3,4c0,2.485 0.889,5.048 3,5c2.22,-0.05 3.019,-2.224 3,-5c-0.017,-2.485 -1.206,-4 -3,-4Zm11.263,-11.934c0.272,-1.343 0.389,-6.101 -1.585,-11.066c0,0 -4.528,0.496 -11.38,5.198c-1.436,-0.397 -3.867,-0.595 -6.298,-0.595c-2.43,0 -4.861,0.198 -6.299,0.594c-6.851,-4.701 -11.378,-5.197 -11.378,-5.197c-1.974,4.965 -1.879,9.611 -1.586,11.066c-2.32,2.518 -3.737,5.543 -3.737,9.675c0,17.966 14.905,18.254 18.667,18.254c0.852,0 2.544,0.002 4.333,0.005c1.789,-0.003 3.483,-0.005 4.333,-0.005c3.762,0 18.667,-0.288 18.667,-18.254c0,-4.132 -1.417,-7.157 -3.737,-9.675Zm-19.122,25.934l-0.141,0c-9.429,0 -16.842,-1.339 -16.842,-10.503c0,-2.195 0.774,-4.233 2.614,-5.924c3.071,-2.818 8.264,-1.325 14.158,-1.325c0.023,0 0.119,0 0.141,0c5.894,0 11.089,-1.492 14.158,1.325c1.84,1.691 2.614,3.729 2.614,5.924c0,9.164 -7.273,10.503 -16.702,10.503Zm-8.141,-14c-1.794,0 -3,2.015 -3,4.5c0,2.485 1.206,4.5 3,4.5c1.796,0 3,-2.015 3,-4.5c0,-2.485 -1.204,-4.5 -3,-4.5Z"
+                                fill-rule="nonzero"
+                            />
+                        </svg>
+
+                        <div class="ms-3 fst-italic text-secondary">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="fst-normal mb-1">Pascal Lebon</div>
+                                </div>
+                                <span class="badge text-secondary">14 Dec</span>
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur, incididunt ut labore.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-7 p-0 rounded-right">
+                    <div style="height: calc(100% - 60px)" class="bg-white">hey</div>
+
+                    <div
+                        style="height: 60px"
+                        class="rounded-right bg-light p-3 d-flex align-items-center justify-content-between"
+                    >
+                        <p class="text-secondary m-0">Votre message</p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#0d6efd"
+                            width="24px"
+                            height="24px"
+                        >
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                            <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

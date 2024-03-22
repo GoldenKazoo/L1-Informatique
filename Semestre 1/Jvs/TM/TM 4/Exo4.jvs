@@ -1,0 +1,15 @@
+void main() {
+    int[] tab;
+    int nombre = readInteger("Entrez un nombre");
+    tab = new int[nombre];
+    for (int i = 0; i < tab.length; i++) {
+        tab[i] = readInteger("Donnez un nombre à ajouter");
+        print(tab[i] + ", ");
+    }
+    println("");
+    int k = readInteger("Entrez k");
+    for (int j = 0; j < tab.length; j++) {
+        tab[j] = tab[j] * k;
+        print(tab[j] + ", ");
+    }
+}

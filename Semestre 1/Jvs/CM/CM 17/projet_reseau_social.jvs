@@ -1,0 +1,58 @@
+final int MAX_AMIS = 100;
+
+class Utilisateur {
+    String nom;
+    int nbAmis;
+    Amitie[] amis;
+}
+
+class Amitie {
+    Utilisateur ident;
+    int nbMessages;
+}
+
+Utilisateur creation(String nom) {
+    Utilisateur user = new Utilisateur();
+    user.nom = readString("Entrez votre nom");
+    user.amis = new Amitie[MAX_AMIS]; // Amitie[] listeami = new Amitie[0];
+    user.nbAmis = 0;
+
+    return user;
+}
+
+void ajouterAmitie(Utilisateur u1, Utilisateur u2) {
+    Amitie newami = new Amitie();
+    newami.ident = u2;
+    newami.nbMessages = 0;
+    u1.nbAmis = u1.nbAmis + 1;
+    u1.amis[u1.nbAmis] = newami;
+}
+
+void spam(Utilisateur u) {
+    for (int i = 0; i < u.nbAmis; i++) {
+
+        u.amis[i].nbMessages = u.amis[i].nbMessages + 1;
+    }
+}
+
+boolean estAmi(Utilisateur u1, Utilisateur u2) {
+    boolean verif = false;
+    for (int i = 0; i < u1.nbAmis; i++) {
+        if (u1.amis[i].ident == u2) {
+            verif = true;
+            return verif;
+        } else {
+        }
+    }
+    return verif;
+}
+
+boolean clique(Utilisateur[] us){
+    for(int i = 0 ; i < us.length; i++){
+        for(int j = 0 ; j < us[i].amis){
+            
+        }
+    }
+}
+
+void main() {}
